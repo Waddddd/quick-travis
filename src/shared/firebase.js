@@ -3,13 +3,13 @@ import 'firebase/database';
 import 'firebase/auth';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyD1GYAgBteBkLHKtmmXrvsqKFxoRr2O-R8",
-    authDomain: "work2gather-e8973.firebaseapp.com",
-    databaseURL: "https://work2gather-e8973.firebaseio.com",
-    projectId: "work2gather-e8973",
-    storageBucket: "work2gather-e8973.appspot.com",
-    messagingSenderId: "609218763867",
-    appId: "1:609218763867:web:b13aa86c4dba6b4793337e"
+    apiKey: "AIzaSyAJR7H4KjFGNF-tDKP_mJXmZVYDVL_j71E",
+    authDomain: "quick-travis-f010b.firebaseapp.com",
+    databaseURL: "https://quick-travis-f010b.firebaseio.com",
+    projectId: "quick-travis-f010b",
+    storageBucket: "quick-travis-f010b.appspot.com",
+    messagingSenderId: "554642071717",
+    appId: "1:554642071717:web:b0abf35d113fc3cc8f2d4c",
   };
   
   firebase.initializeApp(firebaseConfig);
