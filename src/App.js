@@ -1,4 +1,4 @@
-// import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
@@ -51,7 +51,7 @@ const Welcome = ({ user, invites, setGridView}) => {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h5" className={classes.title} onClick={() => {window.location.reload(false)}}>
-            Work2Gather-travis
+            Work2Gather-travis2
           </Typography>
           <Tooltip title="Home">
             <IconButton onClick={() => setGridView("ACTIVE")}>
