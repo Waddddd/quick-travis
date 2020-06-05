@@ -106,16 +106,16 @@ const Banner = ({ user, invites, title, setGridView }) => (
 const App = () => {
   const [goalsJSON, setGoals] = useState({});
   const [invites, setInvite] = useState({});
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState({uid:"gQ7yfse35iwjfoeb", displayName:"Tester",email:"travistest2@gmail.com" });
   const [emailTouid, setEmailTouid] = useState({});
   const [open, setOpen] = useState(false);
   const [gridView, setGridView] = useState("ACTIVE");
 
   var goals = Object.values(goalsJSON);
 
-  useEffect(() => {
-    firebase.auth().onAuthStateChanged(setUser);
-  }, []);
+  // useEffect(() => {
+  //   firebase.auth().onAuthStateChanged(setUser);
+  // }, []);
 
   useEffect(() => {
     const handleData = snap => {
