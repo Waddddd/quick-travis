@@ -373,7 +373,7 @@ const Goal = ({ goal, user }) => {
         <Card className={classes.root}>
           <CardContent>
             <div style={{ width: "80%", display: "inline-block" }}>
-              <Typography data-testid="goaltitle" variant="h5" component="h2">
+              <Typography data-cy="goaltitle" variant="h5" component="h2">
                 {goal["title"]}
               </Typography>
               <Typography className={classes.pos} color="textSecondary">
