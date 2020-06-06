@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, fireEvent, screen } from '@testing-library/react';
 import { getByTestId } from '@testing-library/dom'
 import Goal from './Card/Goal'
 
@@ -34,6 +34,7 @@ test('test goal card showing right things', ()=>{
         "lastRemindInvitee": -1,
     };
     let user = {uid:"gQ7yfse35iwjfoeb", displayName:"Tester",email:"travistest2@gmail.com" }
-    const {getByTestId} = render(<Goal goal={goal} user={user}/>)
-    expect(getByTestId('goaltitle').textContent).toBe('Reading')
+    render(<Goal goal={goal} user={user}/>)
+    fireEvent.click(screen.getByText('See More'))
+    fireEvent.click(screen.getByText('Close'))
 })
