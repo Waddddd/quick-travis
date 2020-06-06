@@ -90,6 +90,7 @@ export default function SeeMore({ goal, buttonText }) {
       <div>
         <div>
           <Button  
+            data-cy="seemore"
             size="medium" 
             variant="contained" 
             color="primary" 
@@ -121,7 +122,7 @@ export default function SeeMore({ goal, buttonText }) {
         <DialogContent>
           <div>
             <div style={{float:'left'}}>
-              <DialogContentText>
+              <DialogContentText data-cy="dialogcontent">
                 {goal.description}
                 <br></br>
                 Started: {goal.startDate}
