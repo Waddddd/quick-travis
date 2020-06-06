@@ -33,8 +33,8 @@ export default function SeeMore({ goal, buttonText }) {
   const [open, setOpen] = React.useState(false);
   const [goalData, setGoalData] = useState([]);
   const [showView, setShowView] = React.useState('BAR');
-  const [creatorName, setCreatorName] = useState([]);
-  const [inviteeName, setInviteeName] = useState([]);
+  const [creatorName, setCreatorName] = useState("");
+  const [inviteeName, setInviteeName] = useState("");
 
   const getDayOn = () => {
     var startdate = new Date(goal["startDate"]);

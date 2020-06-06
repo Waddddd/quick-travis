@@ -1,13 +1,39 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import App from './App';
+import { getByTestId } from '@testing-library/dom'
+import Goal from './Card/Goal'
 
-// test('renders learn react link', () => {
-//   const { getByText } = render(<App />);
-//   const linkElement = getByText(/learn react/i);
-//   expect(linkElement).toBeInTheDocument();
-// });
-test('starter test', () => {
-	const value = 1;
-	expect(value).toEqual(1);
-});
+test('test goal card showing right things', ()=>{
+    let goal = {
+        "deleted": false,
+        "rejected": false, 
+        "confirmed": true,
+        "archivedCreator": false, 
+        "archivedInvitee": false, 
+        "key": "-M95fFkz8Z6yJAtYIvLp",
+        "title": "Reading",
+        "description": "Read a book for 10 minutes",
+        "startDate": "6/5/2020",
+        "duration": "1",
+        "goalType": "Qualitative",
+        "groupMembers": {
+          "creator": "gQ7yfse35iwjfoea",
+          "invitee": "gQ7yfse35iwjfoeb",
+        },
+        "minimum": "1",
+        "metric": "gQ7yfse35iwjfoea",
+        "progress": {
+          "gQ7yfse35iwjfoea": {
+            0: 0,
+          },
+          "gQ7yfse35iwjfoeb": {
+            0: 0,
+          },
+        },
+        "lastRemindCreator": -1,
+        "lastRemindInvitee": -1,
+    };
+    let user = {uid:"gQ7yfse35iwjfoeb", displayName:"Tester",email:"travistest2@gmail.com" }
+    const {getByTestId} = render(<Goal goal={goal} user={user}/>)
+    expect(getByTestId('goaltitle').textContent).toBe('Reading')
+})
